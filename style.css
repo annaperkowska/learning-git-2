@@ -1,16 +1,21 @@
 * {
 	box-sizing: border-box;
-	order: 1px solid red;
 }
 body {
-	background: linear-gradient(to right, red, yellow, green, blue, purple);
+	background: linear-gradient(to top, purple, blue, green, yellow, green, blue, purple);
 	font-family: 'Indie Flower', cursive;
 	color: #FFF;
 	margin-before: none;
 }
 .hero {
-	background-image: url(https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?h=350&auto=compress&cs=tinysrgb);
-	background-size: cover;
+	background: rgba(0,0,0,0.5);
+	border-radius: 0 0 20px 20px;
+	box-shadow: 5px 5px rgba(0,0,0,0.8);
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 30px;
 }
 .song {
 	display: flex;
@@ -25,7 +30,7 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	background: rgba(0,0,0,0.5);
-	width: 60%;
+	width: 50%;
 	box-shadow: 5px 5px rgba(0,0,0,0.8);
 	border-radius: 5%;
 }
