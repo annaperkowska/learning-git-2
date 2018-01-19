@@ -1,0 +1,37 @@
+* {
+	box-sizing: border-box;
+	order: 1px solid red;
+}
+body {
+	background: #152937;
+	font-family: 'Indie Flower', cursive;
+	color: #FFF;
+	margin-before: none;
+}
+.hero {
+	background-image: url(https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?h=350&auto=compress&cs=tinysrgb);
+	background-size: cover;
+}
+.song {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+.container {
+	padding: 20px;
+}
+.song-background {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: rgba(0,0,0,0.5);
+	width: 60%;
+	box-shadow: 5px 5px rgba(0,0,0,0.8);
+	border-radius: 5%;
+}
+.title {
+	text-align: center;
+}
+.song-text, .footer {
+	text-align: center;
+}
