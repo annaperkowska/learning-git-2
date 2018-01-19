@@ -3,7 +3,7 @@
 	order: 1px solid red;
 }
 body {
-	background: #152937;
+	background: linear-gradient(to right, red, yellow, green, blue, purple);
 	font-family: 'Indie Flower', cursive;
 	color: #FFF;
 	margin-before: none;
