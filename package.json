@@ -11,13 +11,13 @@
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "build": "npm-run-all build:* test",
-    "build:clean": "npm install rimraf && rm -rf css/*.css"
+    "build:clean": "npm install --save-dev rimraf && rm -rf css/*.css",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
-    "watch": "npm-run-all build -p watch:*",
-    "watch:sassprefixer": "onchange -d 100 sass/* -- autoprefixer-cli -o css/style.css && node-sass --output-style expanded --source-map true -o css sass"
-    "watch:browsersync": "npm install --save-dev browser-sync"
+    "watch": "npm-run-all build -p watch:sassprefixer watch:browsersync",
+    "watch:sassprefixer": "onchange -d 100 sass/* -- autoprefixer-cli -o css/style.css && node-sass --output-style expanded --source-map true -o css sass",
+    "watch:browsersync": "browser-sync start --server --files css/*.css *.html"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,11 @@
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.23.5",
-    "nu-html-checker": "^0.1.0"
+    "globstar": "^1.0.0",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^3.3.0",
+    "rimraf": "^2.6.2"
   }
 }
