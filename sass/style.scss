@@ -2,13 +2,14 @@
         box-sizing: border-box;
 }
 body {
-        background: linear-gradient(to top, purple, blue, green, yellow, green, blue, purple);
+        background: linear-gradient(to top, red, blue, green, yellow, 
+green, blue, purple);
         font-family: 'Indie Flower', cursive;
         color: #FFF;
         margin-before: none;
 }
-        .hero {
-        background: rgba(1,0,0,0.5);
+.hero {
+        background: rgba(0,0,0,0.5);
         border-radius: 0 0 20px 20px;
         box-shadow: 5px 5px rgba(0,0,0,0.8);
         width: 70%;
@@ -20,7 +21,7 @@ body {
 .song {
         display: flex;
         justify-content: center;
-        padding: 25px;
+        padding: 20px;
 }
 .container {
         padding: 20px;

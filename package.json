@@ -15,9 +15,11 @@
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
-    "watch": "npm-run-all build -p watch:sassprefixer watch:browsersync",
-    "watch:sassprefixer": "onchange -d 100 sass/* -- autoprefixer-cli -o css/style.css && node-sass --output-style expanded --source-map true -o css sass",
-    "watch:browsersync": "browser-sync start --server --files css/*.css *.html"
+    "watch": "npm-run-all build -p watch:*",
+    "watch:sassprefixer": "onchange sass/*.scss -- npm-run-all sassprefixer:*",
+    "sassprefixer:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "sassprefixer:autoprefixer": "autoprefixer-cli -o css/style.css",
+    "watch:browsersync": "browser-sync start --server --files 'css/*.css' '*.html'"
   },
   "repository": {
     "type": "git",
